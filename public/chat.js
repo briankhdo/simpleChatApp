@@ -31,7 +31,10 @@ $(function(){
 		feedback.html('');
 		message.val('');
 		chatroom.append("<p class='message'>" + data.username + ": " + data.message + "</p>");
-		$("#chatroom").scrollTop($('#chatroom').prop("scrollHeight"));
+		// console.log("Scroll: " + $("#chatroom").scrollTop() + ". Height: " + ($('#chatroom').prop("scrollHeight") - $('#chatroom').height() + 100));
+		if ($("#chatroom").scrollTop() + 100 > $('#chatroom').prop("scrollHeight") - $('#chatroom').height()) {
+			$("#chatroom").scrollTop($('#chatroom').prop("scrollHeight"));
+		}
 	})
 
 	//Emit a username
