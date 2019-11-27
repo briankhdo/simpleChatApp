@@ -17,6 +17,26 @@
     <div class="container-fluid p-3">
       <div class="row">
         <div class="col-md-8">
+          <!-- CSS  -->
+           <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+
+
+          <!-- HTML -->
+          <video id='hls-example'  class="video-js vjs-default-skin" width="100%" height="100%" controls muted style="max-width: 100%; max-height: 100%; width: 100vh; height: 100vh;">
+          <source type="application/x-mpegURL" src="https://b50c6c1b87f45ea.kcdn.vn/AChi-demo/test-streaming.m3u8">
+          </video>
+
+
+          <!-- JS code -->
+          <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+          <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+          <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+
+          <script>
+          var player = videojs('hls-example');
+          player.play();
+          </script>
         </div>
         <div class="col-md-4">
           <section>
